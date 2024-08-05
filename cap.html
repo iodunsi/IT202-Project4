@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cancel A Procedure</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .overlay {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+     <a class="active" href="p4index.html">Home</a>
+    <a href="p4rt.php">Search Receptionist Account</a>
+    <a href="upr.html">Update Patient Record</a>
+    <a href="mpa.html">Make Patient Appointment</a>
+    <a href="sap.html">Schedule A Procedure</a>
+    <a href="cap.html">Cancel A Procedure</a>
+    <a href="cpa.html">Create Patient Account</a>
+     <a href="cancapp.html">Cancel Appointment</a>
+    </div>
+    <section>
+        <div class="overlay">
+            <div class="login-info">
+                <div class="transparent-box">
+                    <form id="verifyForm">
+                        <h1>Cancel A Procedure Form</h1>
+                        <label for="pID">Procedure ID:</label>
+                        <input type="text" id="pID" name="pID" required>REQUIRED
+                        <br>
+                        <br>
+                        <button type="button" onclick="canPro()">Cancel Procedure</button>
+
+                        <script>
+                            function canPro() {
+                                if (confirm("You are about to CANCEL this Procedure. Are you sure you want to do so?")) {
+                                    var pID = document.getElementById('pID').value;
+
+                                    $.ajax({
+                                        type: "GET",
+                                        url: "cap.php",
+                                        data: {
+                                            aID: aID,
+                                            sum: 'SubmitUpdate'
+                                        },
+                                        success: function (response) {
+                                            alert(response);
+                                        },
+                                        error: function (error) {
+                                            console.error(error);
+                                        }
+                                    });
+                                } else {
+                                    alert("Procedure cancellation aborted.");
+                                }
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

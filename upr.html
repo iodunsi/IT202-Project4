@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patient Records</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+     .overlay {
+    margin-top: 40px;
+  }
+  </style>
+</head>
+<body>
+ <div class="topnav">
+    <a class="active" href="p4index.html">Home</a>
+    <a href="p4rt.php">Search Receptionist Account</a>
+    <a href="upr.html">Update Patient Record</a>
+    <a href="mpa.html">Make Patient Appointment</a>
+    <a href="sap.html">Schedule A Procedure</a>
+    <a href="cap.html">Cancel A Procedure</a>
+    <a href="cpa.html">Create Patient Account</a>
+     <a href="cancapp.html">Cancel Appointment</a>
+  </div>
+    <section>
+        <div class="overlay">
+            <div class="login-info">
+                <div class="transparent-box">
+                    <form id="updateForm">
+                        <h1>Update Patient Records Form</h1>
+                        <br>
+                        <br>
+                        <label for="shots">Shots:</label>
+                        <input type="text" id="shots" name="shots" required>REQUIRED
+                        <br>
+                        <br>
+                        <label for="illnesses">Illnesses:</label>
+                        <input type="text" id="illnesses" name="illnesses" required>REQUIRED
+                        <br>
+                        <br>
+                        <label for="patientID">Patient's ID:</label>
+                        <input type="text" id="patientID" name="patientID" required>REQUIRED
+                        <br>
+                        <br>
+                        <button type="button" onclick="confirmUpdate()">Update Patient Record</button>
+
+                        <script>
+                            function confirmUpdate() {
+                                // Prompt the user for confirmation
+                                if (confirm("Are you sure you want to update the patient's records?")) {
+                                  
+                                    var shots = document.getElementById('shots').value;
+                                    var illnesses = document.getElementById('illnesses').value;
+                                    var patientID = document.getElementById('patientID').value;
+
+                                  
+
+                                    
+                                    window.location.href = "upr.php?sum=SubmitUpdate&shots=" + encodeURIComponent(shots) +
+                                                                "&illnesses=" + encodeURIComponent(illnesses) +
+                                                                "&patientID=" + encodeURIComponent(patientID);
+                                } else {
+                                    // User canceled the update
+                                    alert("Update canceled.");
+                                }
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

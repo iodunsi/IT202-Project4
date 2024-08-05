@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project 4</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <section> 
+    <div class="overlay">
+      <div class="login-info">
+        <div class="transparent-box">
+          <form id="healthForm" form action="p4verify.php" method="post">
+
+            <h1>Welcome to House of Health!</h1>
+
+            <label for="rcpfst">Receptionist's First Name:</label>
+            <input type="text" name="rcpfst" id="rcpfst" placeholder="First"> <b>REQUIRED</b>
+            <br>
+            <br>
+
+            <label for="rcplst">Receptionist's Last Name:</label>
+            <input type="text" name="rcplst" id="rcplst" placeholder="Last">   <b>REQUIRED</b> 
+            <br>
+            <br>
+
+            <label for="rcppass">Receptionist's Password:</label>
+            <input type="password" name="rcppass" id="rcppass" placeholder="Password">  <b>REQUIRED</b>  
+            <br>
+            <br>
+
+            <label for="rcpid">Receptionist's ID Number:</label>
+            <input type="text" name="rcpid" id="rcpid" placeholder="ID #">   <b>REQUIRED</b>
+            <br>
+            <br>
+
+            <label for="rcpphn">Receptionist's Phone Number:</label>
+            <input type="tel" name="rcpphn" id="rcpphn" placeholder="Phone #">   <b>REQUIRED</b>
+            <br>
+            <br>
+
+            <label for="rcpem">Receptionist's Email:</label>
+            <input type="email" name="rcpem" id="rcpem" placeholder="Email"> 
+            <span id="Eerror" class="error"><b>REQUIRED</b></span> 
+            <br>
+            <br>
+
+            Select a Transaction:
+            <br>
+            <label><input type="checkbox" name="transaction" value="searchAccount" id="searchAccount"> Search Your Account</label>
+            <br>
+            <label><input type="checkbox" name="transaction" value="bookAppointment" id="bookAppointment"> Book an Appointment</label>
+            <br>
+            <label><input type="checkbox" name="transaction" value="cancelAppointment" id="cancelAppointment"> Cancel an Appointment</label>
+            <br>
+            <label><input type="checkbox" name="transaction" value="requestProcedures" id="requestProcedures"> Request Procedures</label>
+            <br>
+            <label><input type="checkbox" name="transaction" value="cancelProcedures" id="cancelProcedures"> Cancel Procedures</label>
+            <br>
+            <label><input type="checkbox" name="transaction" value="updateInfo" id="updateInfo"> Update Patient Information</label>
+            <br>
+            <label><input type="checkbox" name="transaction" value="createAccount" id="createAccount"> Create a New Patient Account</label>
+            <br>
+
+            <br>
+            <br>
+
+            <label for="chk">Check the box to request an Email confirmation:</label>
+            <input type="checkbox" name="chk" id="chk">
+            <br>
+            <br>
+            <input type="button" id="subm" name="sum" value="Submit" onclick="validateForm()">
+
+            
+            <input type="reset" id="rst" name="rst">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
