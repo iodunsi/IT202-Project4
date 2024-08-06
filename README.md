@@ -35,7 +35,7 @@ This healthcare system project aims to streamline and manage various administrat
 
 ### Enhancements
 
-I'll add the enhancements as I complete them. 
+- Made styling more consistent with healthcare related websites, made scrolling more static on the homepage.
 
 ### Contributing
 Contributions are welcome! Please fork this repository and submit pull requests for any enhancements or bug fixes.
