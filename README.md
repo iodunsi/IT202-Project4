@@ -1,6 +1,6 @@
 # IT202 Project 4: Building A Healthcare System
 
-This project is one that I completed as part of my time taking the IT202: Internet Applications course at NJIT. The project was based around building a functioning healthcare system. I migrated it to Github in order to enhance it/add it to my resume.
+This project is one that I completed as part of my time taking the IT202: Internet Applications course at NJIT. The project was based around building a functioning healthcare system. I migrated it to Github in order to enhance it/add it to my resume. A link to how the project looked when I first turned it in can be found [here](https://web.njit.edu/~io6/Project4/p4index.html)
 
 ## Project Overview
 
@@ -36,6 +36,7 @@ This healthcare system project aims to streamline and manage various administrat
 ### Enhancements
 
 - Made styling more consistent with healthcare related websites, made scrolling more static on the homepage.
+- Fixed navigation issue on "Update Patient Record" page.
 
 ### Contributing
 Contributions are welcome! Please fork this repository and submit pull requests for any enhancements or bug fixes.
