@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: php-service
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: servername
+        value: sql1.njit.edu
+      - key: username
+        value: io6
+      - key: password
+        value: HtnbaNmibf1#
+      - key: dnname
+        value: io6
+      
