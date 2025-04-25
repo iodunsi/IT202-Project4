@@ -1,140 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!doctype html>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <link rel="icon" href="path/to/favicon.ico">
-      <style>
-        body {
-          background: linear-gradient(to right, #6dd5fa, #2980b9);
-          color: #000;
-        }
-        .footer {
-          background-color: #fff;
-          color: #333;
-          padding: 10px 20px;
-          font-size: 0.9rem;
-          text-align: center;
-        }
-      </style>
-      <title>House of Health</title>
-    </head>
-    <body>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00008B;">
-        <div class="container">
-          <a class="navbar-brand text-white font-weight-bold" href="#" style="font-size: 1.5rem;">House of Health</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link text-white" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="p4rt.php">Search Receptionist Info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="upr.html">Update Patient Record</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="mpa.html">Schedule an Appointment</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="sap.html">Schedule a Procedure</a>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="mpa.html">Cancel A Procedure</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="cpa.html">Create New Patient Account</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="cancapp.html">Cancel Appointment</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-</div>
-  <section> 
-    <div class="overlay">
-      <div class="login-info">
-        <div class="transparent-box">
-          <form id="healthForm" form action="p4verify.php" method="post">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>House of Health</title>
 
-            <h1>Welcome to House of Health!</h1>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-            <label for="rcpfst">Receptionist's First Name:</label>
-            <input type="text" name="rcpfst" id="rcpfst" placeholder="First"> <b>REQUIRED</b>
-            <br>
-            <br>
+    .navbar {
+      background-color: #00008B;
+    }
 
-            <label for="rcplst">Receptionist's Last Name:</label>
-            <input type="text" name="rcplst" id="rcplst" placeholder="Last">   <b>REQUIRED</b> 
-            <br>
-            <br>
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
 
-            <label for="rcppass">Receptionist's Password:</label>
-            <input type="password" name="rcppass" id="rcppass" placeholder="Password">  <b>REQUIRED</b>  
-            <br>
-            <br>
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      background: url('bexc.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-            <label for="rcpid">Receptionist's ID Number:</label>
-            <input type="text" name="rcpid" id="rcpid" placeholder="ID #">   <b>REQUIRED</b>
-            <br>
-            <br>
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
 
-            <label for="rcpphn">Receptionist's Phone Number:</label>
-            <input type="tel" name="rcpphn" id="rcpphn" placeholder="Phone #">   <b>REQUIRED</b>
-            <br>
-            <br>
+    .hero-section h1 {
+      font-size: 3.5rem;
+      color: white;
+    }
 
-            <label for="rcpem">Receptionist's Email:</label>
-            <input type="email" name="rcpem" id="rcpem" placeholder="Email"> 
-            <span id="Eerror" class="error"><b>REQUIRED</b></span> 
-            <br>
-            <br>
+    .hero-section .tomorrows {
+      font-size: 4rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
 
-            Select a Transaction:
-            <br>
-            <label><input type="checkbox" name="transaction" value="searchAccount" id="searchAccount"> Search Your Account</label>
-            <br>
-            <label><input type="checkbox" name="transaction" value="bookAppointment" id="bookAppointment"> Book an Appointment</label>
-            <br>
-            <label><input type="checkbox" name="transaction" value="cancelAppointment" id="cancelAppointment"> Cancel an Appointment</label>
-            <br>
-            <label><input type="checkbox" name="transaction" value="requestProcedures" id="requestProcedures"> Request Procedures</label>
-            <br>
-            <label><input type="checkbox" name="transaction" value="cancelProcedures" id="cancelProcedures"> Cancel Procedures</label>
-            <br>
-            <label><input type="checkbox" name="transaction" value="updateInfo" id="updateInfo"> Update Patient Information</label>
-            <br>
-            <label><input type="checkbox" name="transaction" value="createAccount" id="createAccount"> Create a New Patient Account</label>
-            <br>
+    .form-section {
+      background: linear-gradient(to right, #6dd5fa, #2980b9);
+      padding: 3rem 1rem;
+    }
 
-            <br>
-            <br>
+    label {
+      font-weight: bold;
+    }
 
-            <label for="chk">Check the box to request an Email confirmation:</label>
-            <input type="checkbox" name="chk" id="chk">
-            <br>
-            <br>
-            <input type="button" id="subm" name="sum" value="Submit" onclick="validateForm()">
+    .form-section input[type="text"],
+    .form-section input[type="password"],
+    .form-section input[type="email"],
+    .form-section input[type="tel"] {
+      max-width: 400px;
+      margin-bottom: 1rem;
+    }
 
-            
-            <input type="reset" id="rst" name="rst">
+    .form-section .container {
+      max-width: 800px;
+    }
+  </style>
+</head>
 
-          </form>
-        </div>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">House of Health</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="p4rt.php">Search Receptionist Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="upr.html">Update Patient Record</a></li>
+          <li class="nav-item"><a class="nav-link" href="mpa.html">Schedule an Appointment</a></li>
+          <li class="nav-item"><a class="nav-link" href="sap.html">Schedule a Procedure</a></li>
+          <li class="nav-item"><a class="nav-link" href="mpa.html">Cancel A Procedure</a></li>
+          <li class="nav-item"><a class="nav-link" href="cpa.html">Create New Patient Account</a></li>
+          <li class="nav-item"><a class="nav-link" href="cancapp.html">Cancel Appointment</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="text-white">
+        <h1 class="display-4">Tomorrow's care,<br><span class="tomorrows">TODAY!</span></h1>
+        <p class="lead mt-3">Welcome to House of Health</p>
       </div>
     </div>
   </section>
 
-</body>
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="container text-white">
+      <h2 class="text-center mb-4">Receptionist Portal</h2>
+      <form id="healthForm" action="p4verify.php" method="post">
+        <div class="form-group">
+          <label for="rcpfst">Receptionist's First Name:</label>
+          <input type="text" name="rcpfst" id="rcpfst" class="form-control" placeholder="First" required>
+        </div>
 
+        <div class="form-group">
+          <label for="rcplst">Receptionist's Last Name:</label>
+          <input type="text" name="rcplst" id="rcplst" class="form-control" placeholder="Last" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rcppass">Receptionist's Password:</label>
+          <input type="password" name="rcppass" id="rcppass" class="form-control" placeholder="Password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rcpid">Receptionist's ID Number:</label>
+          <input type="text" name="rcpid" id="rcpid" class="form-control" placeholder="ID #" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rcpphn">Receptionist's Phone Number:</label>
+          <input type="tel" name="rcpphn" id="rcpphn" class="form-control" placeholder="Phone #" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rcpem">Receptionist's Email:</label>
+          <input type="email" name="rcpem" id="rcpem" class="form-control" placeholder="Email" required>
+        </div>
+
+        <label>Select a Transaction:</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="transaction" value="searchAccount" id="searchAccount">
+          <label class="form-check-label" for="searchAccount">Search Your Account</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="transaction" value="bookAppointment" id="bookAppointment">
+          <label class="form-check-label" for="bookAppointment">Book an Appointment</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="transaction" value="cancelAppointment" id="cancelAppointment">
+          <label class="form-check-label" for="cancelAppointment">Cancel an Appointment</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="transaction" value="requestProcedures" id="requestProcedures">
+          <label class="form-check-label" for="requestProcedures">Request Procedures</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="transaction" value="cancelProcedures" id="cancelProcedures">
+          <label class="form-check-label" for="cancelProcedures">Cancel Procedures</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="transaction" value="updateInfo" id="updateInfo">
+          <label class="form-check-label" for="updateInfo">Update Patient Information</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" name="transaction" value="createAccount" id="createAccount">
+          <label class="form-check-label" for="createAccount">Create a New Patient Account</label>
+        </div>
+
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" name="chk" id="chk">
+          <label class="form-check-label" for="chk">Check the box to request an Email confirmation</label>
+        </div>
+
+        <button type="submit" class="btn btn-light">Submit</button>
+        <button type="reset" class="btn btn-outline-light ml-2">Reset</button>
+      </form>
+    </div>
+  </section>
+
+</body>
 </html>
