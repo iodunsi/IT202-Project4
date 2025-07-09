@@ -37,9 +37,14 @@ This healthcare system project aims to streamline and manage various administrat
 
 - Made styling more consistent with healthcare related websites, made scrolling more static on the homepage.
 - Fixed navigation issue on "Update Patient Record" page.
+- Redesigned home page for a more modern feel, gave receptionist login page it's own dedicated page.
 
 ### Contributing
 Contributions are welcome! Please fork this repository and submit pull requests for any enhancements or bug fixes.
 
 ## Contact
 If you have any questions or suggestions, feel free to reach out to me at io6@njit.edu.
+
+## Figma 
+
+As I continue my research into healthcare websites and EHR systems, I'll be actively making mockups to help visualize my work. The link is public view and open for comments, so any comments or pointers will be appreciated! **[Design Link](https://www.figma.com/design/YIkIASLnmcfvCTGxC3lbSq/House-of-Health?node-id=0-1&t=CFkrMCZ0QrqFrWoK-1)**

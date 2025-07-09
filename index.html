@@ -53,7 +53,7 @@
     }
 
     .form-section {
-      background: linear-gradient(to right, #6dd5fa, #2980b9);
+      background: #ffffff;
       padding: 3rem 1rem;
     }
 
@@ -86,14 +86,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="p4rt.php">Search Receptionist Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="rlogin.html">Receptionist Log In</a></li>
+          <!--li class="nav-item"><a class="nav-link" href="p4rt.php">Search Receptionist Info</a></li>
           <li class="nav-item"><a class="nav-link" href="upr.html">Update Patient Record</a></li>
           <li class="nav-item"><a class="nav-link" href="mpa.html">Schedule an Appointment</a></li>
           <li class="nav-item"><a class="nav-link" href="sap.html">Schedule a Procedure</a></li>
           <li class="nav-item"><a class="nav-link" href="mpa.html">Cancel A Procedure</a></li>
           <li class="nav-item"><a class="nav-link" href="cpa.html">Create New Patient Account</a></li>
-          <li class="nav-item"><a class="nav-link" href="cancapp.html">Cancel Appointment</a></li>
+          <li class="nav-item"><a class="nav-link" href="cancapp.html">Cancel Appointment</a></li--->
         </ul>
       </div>
     </div>
@@ -109,79 +109,10 @@
     </div>
   </section>
 
-  <!-- Form Section -->
+  <!-- Homepage Body Section -->
   <section class="form-section">
     <div class="container text-white">
-      <h2 class="text-center mb-4">Receptionist Portal</h2>
-      <form id="healthForm" action="p4verify.php" method="post">
-        <div class="form-group">
-          <label for="rcpfst">Receptionist's First Name:</label>
-          <input type="text" name="rcpfst" id="rcpfst" class="form-control" placeholder="First" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rcplst">Receptionist's Last Name:</label>
-          <input type="text" name="rcplst" id="rcplst" class="form-control" placeholder="Last" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rcppass">Receptionist's Password:</label>
-          <input type="password" name="rcppass" id="rcppass" class="form-control" placeholder="Password" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rcpid">Receptionist's ID Number:</label>
-          <input type="text" name="rcpid" id="rcpid" class="form-control" placeholder="ID #" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rcpphn">Receptionist's Phone Number:</label>
-          <input type="tel" name="rcpphn" id="rcpphn" class="form-control" placeholder="Phone #" required>
-        </div>
-
-        <div class="form-group">
-          <label for="rcpem">Receptionist's Email:</label>
-          <input type="email" name="rcpem" id="rcpem" class="form-control" placeholder="Email" required>
-        </div>
-
-        <label>Select a Transaction:</label><br>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="transaction" value="searchAccount" id="searchAccount">
-          <label class="form-check-label" for="searchAccount">Search Your Account</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="transaction" value="bookAppointment" id="bookAppointment">
-          <label class="form-check-label" for="bookAppointment">Book an Appointment</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="transaction" value="cancelAppointment" id="cancelAppointment">
-          <label class="form-check-label" for="cancelAppointment">Cancel an Appointment</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="transaction" value="requestProcedures" id="requestProcedures">
-          <label class="form-check-label" for="requestProcedures">Request Procedures</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="transaction" value="cancelProcedures" id="cancelProcedures">
-          <label class="form-check-label" for="cancelProcedures">Cancel Procedures</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="transaction" value="updateInfo" id="updateInfo">
-          <label class="form-check-label" for="updateInfo">Update Patient Information</label>
-        </div>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" name="transaction" value="createAccount" id="createAccount">
-          <label class="form-check-label" for="createAccount">Create a New Patient Account</label>
-        </div>
-
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" name="chk" id="chk">
-          <label class="form-check-label" for="chk">Check the box to request an Email confirmation</label>
-        </div>
-
-        <button type="submit" class="btn btn-light">Submit</button>
-        <button type="reset" class="btn btn-outline-light ml-2">Reset</button>
-      </form>
+      <!-- Deciding what to put here. Possibly some nice info cards about hypotheticals of what House of Health can offer if it were a real healthcare organization. -->
     </div>
   </section>
   
